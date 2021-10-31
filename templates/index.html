@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dojo Survey</h1>
+        <form action="/process" method="POST">
+            <div>
+                <input type="checkbox" id="name" name="name" value="{{session["name"]}}">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div>
+                <input type="checkbox" id="location" name="location" value="{{session["location"]}}">
+                <label for="location">Dojo Location</label>
+                <select name="location" id="location">
+                    <option hidden selected disabled>Location</option>
+                    <option>Bellevue</option>
+                    <option>Boise</option>
+                    <option>Chicago</option>
+                    <option>Los Angeles</option>
+                    <option>Silicon Valley</option>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" id="language" name="language" value="{{session["language"]}}">
+                <label for="language">Favorite Language</label>
+                <select name="language" id="language">
+                    <option hidden selected disabled>Language</option>
+                    <option>Python</option>
+                    <option>Java</option>
+                    <option>C#</option>
+                    <option>JavaScript</option>
+                </select>
+            </div>
+            <label for="commentbox">Comments<label>
+            <div><textarea name="commentbox" id="" cols="30" rows="5" placeholder="(optional)"></textarea></div>
+            <button type="submit">Submit</button>
+    </div>
+</body>
+</html>

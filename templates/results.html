@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{session["name"]}}</h1>
+        <table width="250" border="2">
+            <tr>
+                <td>Dojo Location:</td>
+                <td>{{session["location"]}}</td>
+            </tr>
+            <tr>
+                <td>Favorite Language:</td>
+                <td>{{session["language"]}}</td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td>{{session["commentbox"]}}</td>
+            </tr>
+        </table>
+
+        <form action="/Go_back", method="POST">
+            <button href="/">Go Back</button>
+        </form>
+
+    </div>
+</body>
+</html>
